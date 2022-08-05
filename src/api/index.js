@@ -12,12 +12,14 @@ export const getPlacesData = async (type, sw, ne) => {
             },
             headers: {
                 // "X-RapidAPI-Key": process.env.ADVISOR_KEY,
-                "X-RapidAPI-Key": process.env.RAPID_API_TRAVEL_ADVISOR_KEY,
+                "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_TRAVEL_ADVISOR_KEY,
                 "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
             },
         });
         return data;
     } catch (error) {
+        console.log(typeof (process.env.REACT_APP_RAPID_API_TRAVEL_ADVISOR_KEY));
+
         console.log(error);
     }
 };
