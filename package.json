@@ -49,5 +49,14 @@
   "license": "ISC",
   "engines": {
     "node": "16.15.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankaj11koundal/travel-companion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pankaj11koundal/travel-companion/issues"
+  },
+  "homepage": "https://github.com/pankaj11koundal/travel-companion#readme"
 }
