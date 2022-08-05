@@ -14,6 +14,7 @@ const App = () => {
     const [type, setType] = useState('Restaurants');
     const [rating, setRating] = useState('');
     const [filterdPlaces, setFilterdPlaces] = useState([])
+    // const [weatherData, setWeatherData] = useState([]);
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({ coords: {latitude, longitude} }) => {
@@ -29,6 +30,9 @@ const App = () => {
 
     useEffect(() => {
         setIsLoading(true);
+
+        // getWeatherData(coordinates.lat, coordinates.lng)
+        //     .then((data) => setWeatherData(data) );
 
         getPlacesData(type, bounds.sw, bounds.ne).then(data => {
             if (type === "hotels") console.log(data);
@@ -61,6 +65,7 @@ const App = () => {
                         coordinates={coordinates} 
                         places={filterdPlaces.length ? filterdPlaces : places}
                         setChildClicked={setChildClicked}
+                        // weatherData={weatherData}
                     />
                 </Grid>
             </Grid>

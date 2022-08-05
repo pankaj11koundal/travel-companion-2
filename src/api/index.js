@@ -11,7 +11,8 @@ export const getPlacesData = async (type, sw, ne) => {
                 tr_longitude: ne.lat
             },
             headers: {
-                "X-RapidAPI-Key": "8740909d40msh107398d60465c23p187e25jsnb200917dab28",
+                // "X-RapidAPI-Key": process.env.ADVISOR_KEY,
+                "X-RapidAPI-Key": process.env.RAPID_API_TRAVEL_ADVISOR_KEY,
                 "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
             },
         });
@@ -20,3 +21,15 @@ export const getPlacesData = async (type, sw, ne) => {
         console.log(error);
     }
 };
+
+// export const getWeatherData = async (lat, lng) => {
+//     try {
+//         if (lat && lng) {
+//             const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=1ecd4b0f503b5a4da674aa8891a1caac`);
+
+//             return data;
+//         }
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
